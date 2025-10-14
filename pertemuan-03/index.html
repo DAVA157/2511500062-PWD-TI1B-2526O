@@ -75,7 +75,12 @@
         <p>&copy; 2025 DAVA PRATAMA [2511500062]</p>
         
 
-          <style>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Kontak</title>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
@@ -138,4 +143,25 @@
       background-color: #45a049;
     }
   </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Form Kontak</h2>
+    <form action="/submit" method="post">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="pesan">Pesan</label>
+      <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+
+</body>
+</html>
             
