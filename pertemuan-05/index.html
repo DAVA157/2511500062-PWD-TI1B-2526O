@@ -1,45 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>judul halaman</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+   
 
-  #about ,
-  #contact {
-      background-color: rgb(227, 35, 150);
-      border-radius: 10px; 
-      padding: 20px;  
-      margin-bottom: 20px;
-      max-width: 700px;
-      margin: 20px auto;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  } 
-    
-  </style>
-</head>
+    <style>
+      #about {
+        background-color: #007BFF;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 700px;
+        margin: 20px auto;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+      }
+      #about h2 {
+        color: #0f0f0f;
+        border-bottom: 2px solid #0f0f0f;
+        padding-bottom: 6px;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      #about p {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        margin: 0;
+        padding: 6px 0;
+        border-bottom: 1px #0e0d0d;
+      }
+      #about strong {
+        min-width: 180px;
+        color: #0e0d0d;
+        font-weight: 600;
+        text-align: right;
+        padding-right: 16px;
+        flex-shrink: 0;
+      }
+
+      @media (max-width: 600px){
+        #about p {
+          flex-direction: column;
+          align-items: start;
+        }
+        #about strong{
+          text-align: left;
+          padding-left: 0;
+          margin-bottom: 2px;
+        }
+      }
+    </style>
+
+</head> 
 <body>
-  <header>INI HEADER</header>
-  <main></main>
-  <footer></footer>
-</body>
-</html>
-<h1></h1>
-<nav>
-  <ul>
-    <li><a href="#beranda"><h1>BERANDA</h1></a></li>
-    <li><a href="#about"><h1>ABOUT</h1></a></li>
-    <li><a href="#contact"><h1>CONTACT</h1></a></li>
-  </ul>
-</nav>
-<main>
-  <section id="beranda">
-    <h2>BERANDA</h2>
-    <p>SELAMAT DATANG DI HALAMAN BERANDA KAMI.</p>
-    
-  </section>
-  <section id="about">
+
+    <header>
+        <h1>Ini Header</h1>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggel Navigation">
+          &#9776;
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+
+    <main>
+      <section id="home">
+        <h2>Selamat Datang</h2>
+      
+      
+
+        <section id="about">
     <h2>ABOUT</h2>
     <p>&#128512;INFORMASI TENTANG KAMI.&#128512;</p>
     <P><strong>NIM:</strong> 2511500062</P>
@@ -53,137 +91,43 @@
     <P><strong>NAMA KAKAK:</strong>M-</P>
     <P><strong>NAMA ADIK:</strong>HUMEIRA</P>
 
-  </section>
+  </section>>
+
+       
   <section id="contact">
-    <h2>TENTANG KAMI</h2>
-    <p>&#128222; SILAHKAN HUBUNGI KAMI JIKA ANDA MEMBUTUHKAN INFORMASI LEBIH LANJUT. &#128222;</p>
-    <form action="#"method="post">
-      <label for="name">NAMA:</label>
-      <input type="text" id="name" name="name" required>
+    <h2>Kontak Kami</h2>
+    <form action="" method="GET">
 
-      <label for="email">EMAIL:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="pesan">PESAN:</label>
-      <textarea id="pesan" name="pesan" rows="5" required></textarea>
-
-      <input type="submit" value="KIRIM">
-      <input type="reset" value="BATAL">
+      <label for="txtNama">
+        <span>Nama:</span>
+        <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+      </label>
+      <label for="txtEmail">
+        <span>Email:</span>
+        <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+      </label>
+      <label for="txtPesan">
+        <span>Pesan Anda:</span>
+        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+        <small id="charCount">0/200 karakter</small>
+      </label>
+      <button type="submit">Kirim</button>
+      <button type="reset">Batal</button>
     </form>
   </section>
-</main>
 
-<footer>
-  <p>&copy; 2024 DAVA PRATAMA [2511500062] All rights reserved.</p>
-</footer>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
 
-   
-    #about,
-    #contact {
-      background-color: rgb(227, 35, 150);
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 700px;
-      margin: 20px auto;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+        </main>
 
-    #about h2,
-    #contact h2 {
-      color: #003366;
-      border-bottom: 2px solid #003366;
-      padding-bottom: 6px;
-      margin-top: 0;
-      margin-bottom: 16px;
-    }
+    <footer>
+        <p>&copy; 2025 DAVA PRATAMA-2511500062</p>
+    </footer>
+    <script src="script.js"></script>
 
-    #about p {
-      display: flex;
-      justify-content: flex-start;
-      margin: 0;
-      padding: 6px 0;
-      border-bottom: 1px solid #fff;
-    }
+</body>
+</html>
 
-    #about strong {
-      min-width: 180px;
-      color: #003366;
-      font-weight: 600;
-      text-align: right;
-      padding-right: 16px;
-      flex-shrink: 0;
-    }
 
-    @media (max-width: 600px) {
-      #about p {
-        flex-direction: column;
-        align-items: flex-start;
-      }
 
-      #about strong {
-        text-align: left;
-        padding-right: 0;
-        margin-bottom: 2px;
-      }
-    }
 
-    #contact form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #contact label {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      color: #003366;
-      font-weight: bold;
-    }
-
-    #contact input,
-    #contact textarea {
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      padding: 8px;
-      color: #003366;
-      font-weight: normal;
-      box-sizing: border-box;
-      width: 100%;
-      margin-top: 4px;
-    }
-
-    .form-buttons {
-      margin-top: 16px;
-      display: flex;
-      gap: 10px;
-    }
-
-    .form-buttons button {
-      padding: 10px 24px;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      border: none;
-      transition: all 0.3s ease;
-    }
-
-    .form-buttons button[type="submit"] {
-      background-color: #0bf36f;
-      color: #29f496;
-      font-weight: 600;
-    }
-
-    .form-buttons button[type="reset"] {
-      background-color: #fc0606;
-      color: #fa0808;
-      font-weight: 500;
-      }
-</style>
