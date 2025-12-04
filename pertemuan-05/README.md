@@ -5,3 +5,5 @@ NAMA : DAVA PRATAMA<br>
 
 hari ini, rabu 22 oktober 2025, saya memepelajari:
 <ol>
+<li></li>
+</ol>

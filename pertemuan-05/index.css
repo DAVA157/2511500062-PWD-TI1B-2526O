@@ -332,29 +332,3 @@ position: relative;
 z-index: 1;
 color: #fff;
 }
-
-footer {
-  background-color: #007BFF;
-  padding: 10px 0;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-}
-
-footer p.bergerak {
-  display: inline-block;
-  white-space: nowrap;
-  position: absolute;
-  animation: gerakTeks 10s linear infinite;
-  color: white;
-  font-weight: bold;
-}
-
-@keyframes gerakTeks {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
