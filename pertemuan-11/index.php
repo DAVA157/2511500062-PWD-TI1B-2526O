@@ -13,7 +13,6 @@ require_once __DIR__ . '/fungsi.php';
   <link rel="stylesheet" href="style.css">
 </head>
 <?php
-session_start();
 
 require_once __DIR__ . '/fungsi.php';
 ?>

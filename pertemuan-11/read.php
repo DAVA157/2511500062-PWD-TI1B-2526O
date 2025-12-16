@@ -25,7 +25,7 @@ $no = 1;
             <td><?= $row['cnama']; ?></td>
             <td><?= $row['cemail']; ?></td>
             <td><?= $row['cpesan']; ?></td>
-            <td><?= $row['created_at']; ?></td>
+            <td><?= $row['dcreated_at']; ?></td>
         </tr>
 
     <?php endwhile; ?>
