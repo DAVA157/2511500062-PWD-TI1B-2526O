@@ -15,6 +15,10 @@ function tidakKosong($str)
 
 function tampilkanBiodata($conf, $arr)
 {
+function formatTanggal($datetime) {
+    if (empty($datetime)) return '-';
+    return date('d-m-Y H:i:s', strtotime($datetime));
+}
 $html = "";
 foreach ($conf as $k => $v) {
 $label = $v["label"];
