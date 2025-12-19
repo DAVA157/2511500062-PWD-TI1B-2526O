@@ -11,22 +11,22 @@ $no = 1;
 
     <tr>
         <th>No</th>
+        <th>aksi</th>
         <th>ID</th>
         <th>Nama</th>
         <th>Email</th>
         <th>Pesan</th>
         <th>Created At</th>
     </tr>
-
-    <?php while ($row = mysqli_fetch_assoc($q)): ?>
-        <tr>
-            <td><?= $no++; ?></td>
-            <td><?= $row['cid']; ?></td>
-            <td><?= $row['cnama']; ?></td>
-            <td><?= $row['cemail']; ?></td>
-            <td><?= $row['cpesan']; ?></td>
-            <td><?= $row['dcreated_at']; ?></td>
-        </tr>
+<?php $i = 1; ?>
+<?php while ($row = mysqli_fetch_assoc($q)) : ?>
+<tr>
+    <td><?= $i++ ?></td>
+    <td><?= $row['cid']; ?></td>
+    <td><?= $row['cid']; ?></td>
+    <td><?= htmlspecialchars($row['cnama']); ?></td>
+    
+    </tr>
 
     <?php endwhile; ?>
 </table>
