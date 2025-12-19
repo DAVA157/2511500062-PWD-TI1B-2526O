@@ -22,11 +22,10 @@ $no = 1;
 <?php while ($row = mysqli_fetch_assoc($q)) : ?>
 <tr>
     <td><?= $i++ ?></td>
-    <td><?= $row['cid']; ?></td>
+    <td><a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a></td>
     <td><?= $row['cid']; ?></td>
     <td><?= htmlspecialchars($row['cnama']); ?></td>
-    
-    </tr>
+</tr>
 
     <?php endwhile; ?>
 </table>
